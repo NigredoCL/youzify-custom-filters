@@ -18,6 +18,7 @@ class BP_Custom_Activity_Filter {
         foreach ( $activities['activities'] as $activity ) {
             $user_id = $activity->user_id;
             $user = get_userdata( $user_id );
+            //here you change the filter, you can use xprofile_get_field_data to get custom fields, for exaple show only "administrator" posts
             if ( in_array( 'administrator', (array) $user->roles ) ) {
                 $filtered_activities[] = $activity;
             }
