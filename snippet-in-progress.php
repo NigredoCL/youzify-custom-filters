@@ -1,6 +1,6 @@
 /*For set global filters*/
 
-
+<?php
 class BP_Custom_Activity_Filter {
     function __construct() {
         add_filter( 'bp_activity_get', array( $this, 'filter_activities_by_user_role' ), 10, 2 );
@@ -29,4 +29,6 @@ class BP_Custom_Activity_Filter {
 }
 
 new BP_Custom_Activity_Filter();
+
+?>
 
