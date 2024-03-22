@@ -36,6 +36,8 @@ new BP_Custom_Activity_Filter();
 -----------------------------------------------------------------------------------------------------------------------
 <?php //Working in a "real" filter selectable in dropdown filter menu. This is not finish
 
+//The element is effectively added to the filter list, BUT, when it is clicked, the activities are disordered and all activities are shown, even the unwanted ones
+
 class BP_Custom_Activity_Filter {
     function __construct() {
         add_filter( 'bp_get_activity_show_filters_options', array( $this, 'edit_wall_filter' ) );
